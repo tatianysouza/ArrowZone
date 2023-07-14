@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+  background-color: #000;
+}
+
+h1 {
+  color: white;
+  margin-top: 8%;
+}
+
+p {
+  font-size: 18px;
+  color: white;
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 1%;
+}
+
+#full-screen-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-top: -5%;
+  /* Ajuste do valor do margin-top da foto */
+}
+
+nav {
+  display: flex;
+  height: 75px;
+  width: 100%;
+  background-color: black;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+  border-radius: 0 0 10px 10px;
+  position: relative;
+  z-index: 2;
+}
+
+nav .logo {
+  color: white;
+  font-size: 35px;
+}
+
+nav .logo img {
+  width: 180px;
+  height: auto;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  border-bottom: 2px solid #2c8151;
+  border-radius: 0;
+}
+
+nav .menu-btn i {
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 1068px) {
+  #full-screen-image {
+    content: url(img/bannerarrow3responsivotablet.png);
+    margin-top: -15%;
+  }
+
+  nav {
+    height: 60px;
+  }
+
+  nav .menu-btn i {
+    display: block;
+    margin-right: -10px;
+    font-size: 27px;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    background-color: #003840;
+    height: 80vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+
+  nav .logo img {
+    width: 150px;
+    margin-left: -65px;
+  }
+
+  nav ul.open {
+    left: 0;
+  }
+
+  nav ul li {
+    width: 100%;
+    margin: 50px 0;
+  }
+
+  nav ul li a {
+    font-size: 23px;
+    margin: 0px 0px 20px;
+  }
+
+  nav ul li a.active,
+  nav ul li a:hover {
+    background: none;
+    color: #2E8B57;
+  }
+}
+
+/* Estilos CSS para a imagem no layout responsivo */
+@media screen and (max-width: 600px) {
+  #full-screen-image {
+    content: url(img/bannerarrow3responsivo.png);
+    margin-top: -15%;
+  }
+}
+
+/* CSS para losangulo na tela*/
+.arrow {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  margin-top: -6%;
+  background-color: transparent;
+  transform: rotate(45deg);
+  animation: arrowAnimation 2s infinite;
+}
+
+.arrow:before,
+.arrow:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.arrow:before {
+  border-left: 6px solid #003840;
+  border-top: 6px solid #003840;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+
+.arrow:after {
+  border-right: 6px solid #003840;
+  border-bottom: 6px solid #003840;
+  border-left: 6px solid transparent;
+  border-top: 6px solid transparent;
+}
+
+/* Animação do losango */
+@keyframes arrowAnimation {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Efeito de deixar uma cópia para trás */
+.arrow::before,
+.arrow::after {
+  animation: copyArrow 2s infinite;
+}
+
+@keyframes copyArrow {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.cardperson-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+  margin: 0 15%;
+  margin-top: 3%;
+}
+
+.cardperson {
+  width: 100%;
+  height: 274px;
+  background: white;
+  overflow: hidden;
+}
+
+.cardperson-image {
+  width: 100%;
+  height: 80%;
+  background-image: url('img/oliverqueen.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.cardperson:hover .cardperson-image {
+  transform: scale(1.1) translate(-3%, -5%);
+}
+
+.category {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2E8B57;
+  padding: 10px 7px 0;
+  text-align: center;
+}
+
+/*cardperson flash*/
+.cardperson-image-2 {
+  background-image: url('img/barryallen.jpg');
+}
+
+.category-2 {
+  color: #ff0010;
+}
+
+/*cardperson supergirl*/
+.cardperson-image-3 {
+  background-image: url('img/karadanvers.jpg');
+}
+
+.category-3 {
+  color: #000046;
+}
+
+/*cardperson sara*/
+.cardperson-image-4 {
+  background-image: url('img/saralance.png');
+}
+
+.category-4 {
+  color: #4d4d5b;
+}
+
+/*cardperson raio negro*/
+.cardperson-image-5 {
+  background-image: url('img/raionegro.jpeg');
+}
+
+.category-5 {
+  color: #e7d90d;
+}
+
+/*cardpersons batwoman*/
+.cardperson-image-6 {
+  background-image: url('img/katekane.jpg');
+}
+
+.category-6 {
+  color: #000;
+}
+
+.cardperson-image-7 {
+  background-image: url('img/ryanwilder.jpg');
+}
+
+.category-7 {
+  color: #000;
+}
+
+/*cardperson stargirl*/
+.cardperson-image-8 {
+  background-image: url('img/courtneywhitmore.jpg');
+}
+
+.category-8 {
+  color: #005E9D;
+}
+
+/*cardpersons superman and lois */
+.cardperson-image-9 {
+  background-image: url('img/clarkkent.jpg');
+}
+
+.category-9 {
+  color: #00007B;
+}
+
+.cardperson-image-10 {
+  background-image: url('img/loislane.jpg');
+}
+
+.category-10 {
+  color: #00007B;
+}
+
+.my-footer {
+  left: 0;
+  margin-top: 8%;
+  bottom: 0;
+  width: 100%;
+  background-color: #141e30;
+  text-align: center;
+  /* Centralizar conteúdo horizontalmente */
+  padding: 20px;
+  /* Espaçamento interno */
+}
+
+.my-footer .my-button-wrapper {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.my-button-wrapper .my-icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.my-button-wrapper .my-tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.my-button-wrapper .my-tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.my-button-wrapper .my-icon:hover .my-tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.my-button-wrapper .my-icon:hover span,
+.my-button-wrapper .my-icon:hover .my-tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.my-button-wrapper .my-facebook:hover,
+.my-button-wrapper .my-facebook:hover .my-tooltip,
+.my-button-wrapper .my-facebook:hover .my-tooltip::before {
+  background: #1877F2;
+  color: #ffffff;
+}
+
+.my-button-wrapper .my-tiktok:hover,
+.my-button-wrapper .my-tiktok:hover .my-tooltip,
+.my-button-wrapper .my-tiktok:hover .my-tooltip::before {
+  background: #000000;
+  color: #ffffff;
+}
+
+.my-button-wrapper .my-instagram:hover,
+.my-button-wrapper .my-instagram:hover .my-tooltip,
+.my-button-wrapper .my-instagram:hover .my-tooltip::before {
+  background: linear-gradient(#4f5bd5, #962fbf, #d62976, #fa7e1e, #feda75);
+  color: #ffffff;
+}
+
+.my-button-wrapper .my-youtube:hover,
+.my-button-wrapper .my-youtube:hover .my-tooltip,
+.my-button-wrapper .my-youtube:hover .my-tooltip::before {
+  background: #CD201F;
+  color: #ffffff;
+}
+
+
+.heading {
+  color: grey;
+  padding: 5px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+@media (min-width: 601px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .grid-container {
+    justify-content: center;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+
+.text-column {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: 'Jost', sans-serif;
+}
+
+.custom-card {
+  max-width: 300px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-card .content {
+  padding: 1.1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.custom-card .image {
+  object-fit: cover;
+  width: 100%;
+  height: 150px;
+  background-image: url('img/cardoliverqueen.jpg');
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.custom-card .title {
+  color: #111827;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  font-family: 'Jost', sans-serif;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.custom-card .desc {
+  margin-top: 0.5rem;
+  color: #6B7280;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-family: 'Jost', sans-serif;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.custom-card.clicked .title,
+.custom-card.clicked .desc {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.parent {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.action {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  float: right;
+  margin-bottom: 10px;
+}
+
+.action:hover {
+  transform: scale(1.1);
+}
+
+.action:active {
+  outline: none;
+}
+
+.logofooter {
+  width: 20%;
+}
+
+@media (max-width: 900px) {
+  .logofooter {
+    width: 45%;
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: #003840;
+}
+

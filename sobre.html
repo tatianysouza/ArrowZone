@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="img/logoarrrow-removebg-preview.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <title>Sobre nós - ArrowZone</title>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <img src="img/arrowlogo.png" alt="Logo">
+    </div>
+
+    <div class="menu-btn">
+      <i class="fa fa-bars fa-2x" onclick="menuShow()"></i>
+    </div>
+
+    <ul>
+      <li> <a href="index.html"> Home </a> </li>
+      <li> <a href="series.html"> Séries</a> </li>
+      <li> <a href="crossovers.html"> Crossovers</a> </li>
+      <li> <a href="noticias.html"> Notícias</a> </li>
+      <li> <a href="comunidade.html"> Comunidade</a> </li>
+      <li> <a href="sobre.html" class="active"> Sobre</a> </li>
+    </ul>
+  </nav>
+<section class="sobre">
+  <h1 class="tituloSobre">Conheça mais sobre a <img class="sobretitulo" src="FotosSeries/logoarrowsemfundo.png" width=25%></h1><br>
+	<h2>Objetivo</h2>
+	<p>Neste site expositivo, buscamos oferecer aos fãs e entusiastas do Arrowverse uma plataforma informativa e divertida para explorar e celebrar o universo compartilhado da DC, Arrowverse. Aqui você encontrará uma variedade de conteúdos, como curiosidades, notícias e crossovers além da oportunidade de compartilhar uma opnião ou comentário sobre as séries.
+	</p><br>
+  <h2>Nossa Equipe</h2>
+	<p>A equipe por trás deste site é composta por fãs dedicados e apaixonados pelo Arrowverse. Estamos comprometidos em fornecer um conteúdo confiável e de qualidade. 
+		O site foi desenvolvido pelas alunas Maria Eloisa Valença Félix e Tatiany de Souza Albuquerque do 1° período do curso Análise e Desenvolvimento de Sistemas e é o projeto final da disciplina Linguagem de Marcação.</p><br>
+  <h2>Contato</h2>
+  <p style="font-size: 18px;">eloisa.valenca@academico.ifpb.edu.br</p>
+  <p style="font-size: 18px;">tatiany.albuquerque@academico.ifpb.edu.br</p><br>
+	<p>Esperamos que você aproveite sua visita ao nosso site expositivo do Arrowverse. Explore os artigos, mergulhe nas histórias emocionantes e conecte-se com outros fãs que compartilham o mesmo amor por esses incríveis super-heróis e suas jornadas épicas. Juntos, celebramos a grandiosidade desse universo e a diversão que ele nos proporciona. Aventure-se pelo Arrowverse e seja bem-vindo a um mundo cheio de superpoderes e aventuras inesquecíveis!</p>
+</section>
+  <script>
+    var ul = document.querySelector('nav ul');
+    var menuBtn = document.querySelector('.menu-btn i');
+
+    function menuShow() {
+      if (ul.classList.contains('open')) {
+        ul.classList.remove('open');
+      } else {
+        ul.classList.add('open');
+      }
+    }
+  </script>
+
+</body>
+
+<footer class="my-footer">
+	<img src="FotosSeries/logoarrowsemfundo.png" class="logofooter"><br>
+	<div class="my-button-wrapper">
+		<div class="my-button-wrapper">
+			<div class="my-icon my-facebook">
+				<i class="fab fa-facebook-f"></i>
+				<span class="my-tooltip">Facebook</span>
+			</div>
+			<div class="my-icon my-tiktok">
+				<i class="fab fa-tiktok"></i>
+				<span class="my-tooltip">TikTok</span>
+			</div>
+			<div class="my-icon my-instagram">
+				<i class="fab fa-instagram"></i>
+				<span class="my-tooltip">Instagram</span>
+			</div>
+			<div class="my-icon my-youtube">
+				<i class="fab fa-youtube"></i>
+				<span class="my-tooltip">YouTube</span>
+			</div>
+		</div>
+	</div><br>
+	<i class="fa fa-copyright" style="color: white; font-size: 60%;"> Copyright</i>
+</footer>
+
+</html>

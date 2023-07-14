@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="img/logoarrrow-removebg-preview.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="barra.css">
+  <title>Séries - ArrowZone</title>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <img src="img/arrowlogo.png" alt="Logo">
+    </div>
+
+    <div class="menu-btn">
+      <i class="fa fa-bars fa-2x" onclick="menuShow()"></i>
+    </div>
+
+    <ul>
+      <li> <a href="index.html"> Home </a> </li>
+      <li> <a href="series.html" class="active"> Séries</a> </li>
+      <li> <a href="crossovers.html"> Crossovers</a> </li>
+      <li> <a href="noticias.html"> Notícias</a> </li>
+      <li> <a href="comunidade.html"> Comunidade</a> </li>
+      <li> <a href="sobre.html"> Sobre</a> </li>
+    </ul>
+  </nav>
+  <section class="card green">
+    <div class="text-content green">
+      <h3>Arrow</h3>
+      <p>Após um violento naufrágio, o playboy milionário Oliver Queen é dado como morto. Cinco anos depois, é resgatado
+        de uma ilha do Pacífico e enviado de volta para Starling City, onde passa a agir como vigilante secreto.</p>
+      <a href="arrow.html">Saiba mais!</a>
+    </div>
+    <div class="visual">
+      <img src="img/posterarrow.jpg" alt="" width=""
+        height="" />
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="text-content">
+      <h3>The Flash</h3>
+      <p>Acompanhe as aventuras do homem mais veloz do planeta, o cientista da Central City Police Barry Allen, que após
+        um trágico acidente adquire o poder da velocidade.</p>
+      <a href="flash.html">Saiba mais!</a>
+    </div>
+    <div class="visual">
+      <img src="img/posterflash.jpg" alt="" width="" height="" />
+    </div>
+  </section>
+
+  <section class="card blue">
+    <div class="text-content blue">
+      <h3>Super Girl</h3>
+      <p>Kara Zor-El escapou de seu planeta quando tinha 12 anos de idade. Desde que chegou à Terra, ela conseguiu
+        esconder seus poderes, os quais compartilha com seu primo, o Super-Homem. Mas agora, ela ajuda a proteger os
+        cidadãos de National City.</p>
+      <a href="supergirl.html">Saiba mais!</a>
+    </div>
+    <div class="visual">
+      <img src="img/postersupergirl.jpg" alt="" width="" height="" />
+    </div>
+  </section>
+
+  <section class="card yellow">
+    <div class="text-content yellow">
+      <h3>Legends of <br> Tomorow</h3>
+      <p>Após ter visto o futuro, o viajante do tempo Rip Hunter recebe a missão de montar um grupo eclético de heróis e
+        vilões para confrontar
+        uma ameaça invencível - uma que não somente põe em risco o planeta, mas também o tempo.</p>
+      <a href="legends.html">Saiba mais!</a>
+    </div>
+    <div class="visual">
+      <img src="img/posterlegends.jpeg" alt="" width="" height="" />
+    </div>
+  </section>
+
+  <section class="card white">
+    <div class="text-content white">
+      <h3>Black Lightning</h3>
+      <p>Super-herói aposentado e diretor de uma escola, o lendário Raio Negro tem de voltar à ativa quando uma gangue
+        começa a ameaçar sua família.</p>
+      <a href="black.html">Saiba mais!</a>
+    </div>
+    <div class="visual">
+      <img src="img/posterraionegro.jpeg" alt="" width="" height="" />
+    </div>
+  </section>
+
+  <section class="card black">
+    <div class="text-content black">
+      <h3>Batwoman</h3>
+      <p>Kate Kane segue os passos de seu primo desaparecido, Bruce Wayne, e protege as ruas de Gotham City como
+        Batwoman.</p>
+      <a href="batwoman.html">Saiba mais!</a>
+    </div>
+    <div class="visual">
+      <img
+        src="img/posterbatwoman.jpeg" alt="" width="" height="" />
+    </div>
+  </section>
+
+  <section class="card yelblue">
+    <div class="text-content yelblue">
+      <h3>Stargirl</h3>
+      <p>Uma adolescente inspira um improvável grupo de jovens heróis a combater os vilões do passado.</p>
+      <a href="stargirl.html">Saiba mais!</a>
+    </div>
+    <div class="visual">
+      <img src="img/posterstargirl.jpeg" alt="" width="" height="" />
+    </div>
+  </section>
+
+  <section class="card supandlois">
+    <div class="text-content supandlois">
+      <h3>Superman and <br> Lois</h3>
+      <p>Após anos enfrentando vilões megalomaníacos, monstros destruidores e invasores alienígenas, o Homem de Aço e a
+        famosa jornalista Lois Lane retornam à idílica cidade de Smallville para criar os filhos adolescentes, Jonathan
+        e Jordan.</p>
+      <a href="superman.html">Saiba mais!</a>
+    </div>
+    <div class="visual">
+      <img
+        src="img/postersupermanandlois.png" alt="" width="" height="" />
+    </div>
+  </section>
+
+  <script>
+    var ul = document.querySelector('nav ul');
+    var menuBtn = document.querySelector('.menu-btn i');
+
+    function menuShow() {
+      if (ul.classList.contains('open')) {
+        ul.classList.remove('open');
+      } else {
+        ul.classList.add('open');
+      }
+    }
+  </script>
+
+<footer class="my-footer">
+	<img src="FotosSeries/logoarrowsemfundo.png" class="logofooter"><br>
+	<div class="my-button-wrapper">
+		<div class="my-button-wrapper">
+			<div class="my-icon my-facebook">
+				<i class="fab fa-facebook-f"></i>
+				<span class="my-tooltip">Facebook</span>
+			</div>
+			<div class="my-icon my-tiktok">
+				<i class="fab fa-tiktok"></i>
+				<span class="my-tooltip">TikTok</span>
+			</div>
+			<div class="my-icon my-instagram">
+				<i class="fab fa-instagram"></i>
+				<span class="my-tooltip">Instagram</span>
+			</div>
+			<div class="my-icon my-youtube">
+				<i class="fab fa-youtube"></i>
+				<span class="my-tooltip">YouTube</span>
+			</div>
+		</div>
+	</div><br>
+	<i class="fa fa-copyright" style="color: white; font-size: 60%;"> Copyright</i>
+</footer>
+
+</body>
+
+</html>
